@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE-edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+      
+    block title  
+      title #{title}
+    
+    block page-meta
+      meta(property="og:title" content="#{title}")
+    
+    block fonts
+      link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css')
+    
+    block styles
+      link(rel="stylesheet" href="/style.min.css")
+    
+    block header-scripts
+      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+      script(src="/critical.min.js")
+        
+  block body
+    .site-wrapper
+      block header
+        include includes/header
+        
+      block content
+
+      block footer
+        include includes/footer
+      
+      block footer-scripts
+        script(src="/deferred.min.js")
