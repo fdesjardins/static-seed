@@ -1,3 +1,3 @@
 config =
   locals:
-    title: ''
+    title: 'my awesome site'
